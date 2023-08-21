@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#252529"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="CALCULATE NOW"
+        android:textColor="#FBF199"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+
+    <TextView
+        android:id="@+id/displayResult"
+        android:layout_width="218dp"
+        android:layout_height="83dp"
+        android:ems="10"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="Autofill,HardcodedText,SpUsage,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <androidx.cardview.widget.CardView
+        android:longClickable="false"
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="505dp"
+        android:backgroundTint="#2F2F30"
+        android:clickable="true"
+        android:foreground="@drawable/clickeffect"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="KeyboardInaccessibleWidget">
+
+        <Button
+            android:id="@+id/cButton"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/upperbutton"
+            android:elevation="13dp"
+            android:onClick="numberTask"
+            android:text="C"
+            android:textColor="#53ECFF"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck">
+
+        </Button>
+
+
+        <Button
+            android:id="@+id/seven"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="320dp"
+            android:background="@drawable/button_design"
+            android:elevation="13dp"
+            android:onClick="numberTask"
+            android:text="7"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck">
+
+        </Button>
+
+
+        <Button
+            android:id="@+id/eight"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="320dp"
+            android:background="@drawable/button_design"
+            android:elevation="13dp"
+            android:onClick="numberTask"
+            android:text="8"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck">
+
+        </Button>
+
+        <Button
+            android:id="@+id/nine"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="320dp"
+            android:background="@drawable/button_design"
+            android:elevation="13dp"
+            android:onClick="numberTask"
+            android:text="9"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck">
+
+        </Button>
+
+        <Button
+            android:id="@+id/division"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="320dp"
+            android:layout_marginTop="320dp"
+            android:background="@drawable/buttonnext_design"
+            android:elevation="13dp"
+            android:onClick="taskoperator"
+            android:text="/"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck">
+
+        </Button>
+
+
+        <Button
+            android:id="@+id/decimal"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="320dp"
+            android:layout_marginTop="410dp"
+            android:background="@drawable/buttonnext_design"
+            android:elevation="13dp"
+            android:onClick="numberTask"
+            android:text="."
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck">
+
+        </Button>
+
+
+        <Button
+            android:id="@+id/bracketOpen"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="410dp"
+            android:background="@drawable/upperbutton"
+            android:elevation="13dp"
+            android:onClick="numberTask"
+            android:text="("
+            android:textColor="#1DE5FF"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck">
+
+        </Button>
+
+
+        <Button
+            android:id="@+id/zero"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="410dp"
+            android:background="@drawable/upperbutton"
+            android:elevation="13dp"
+            android:onClick="numberTask"
+            android:text="0"
+            android:textColor="#1DE5FF"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck,DuplicateSpeakableTextCheck">
+
+        </Button>
+
+
+        <Button
+            android:id="@+id/bracketClosed"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="410dp"
+            android:background="@drawable/upperbutton"
+            android:elevation="13dp"
+            android:onClick="numberTask"
+            android:text=")"
+            android:textColor="#1DE5FF"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck">
+
+        </Button>
+
+
+        <Button
+            android:id="@+id/four"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="220dp"
+            android:background="@drawable/button_design"
+            android:elevation="13dp"
+            android:onClick="numberTask"
+            android:text="4"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck">
+
+        </Button>
+
+
+        <Button
+            android:id="@+id/five"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/button_design"
+            android:elevation="13dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="220dp"
+            android:onClick="numberTask"
+            android:text="5"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText,RtlHardcoded">
+        </Button>
+
+        <Button
+            android:id="@+id/six"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/button_design"
+            android:elevation="13dp"
+            android:layout_marginStart="220dp"
+            android:layout_marginTop="220dp"
+            android:onClick="numberTask"
+            android:text="6"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText">
+        </Button>
+
+        <Button
+            android:id="@+id/multiplication"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="320dp"
+            android:layout_marginTop="220dp"
+            android:background="@drawable/buttonnext_design"
+            android:elevation="13dp"
+            android:onClick="taskoperator"
+            android:text="*"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck">
+
+        </Button>
+
+
+        <Button
+            android:id="@+id/one"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/button_design"
+            android:elevation="13dp"
+            android:onClick="numberTask"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck">
+
+        </Button>
+
+
+        <Button
+            android:id="@+id/two"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/button_design"
+            android:elevation="13dp"
+            android:onClick="numberTask"
+            android:text="2"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck">
+
+        </Button>
+
+        <Button
+            android:id="@+id/three"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/button_design"
+            android:elevation="13dp"
+            android:onClick="numberTask"
+            android:text="3"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck">
+
+        </Button>
+
+        <Button
+            android:id="@+id/subtraction"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:onClick="taskoperator"
+            android:background="@drawable/buttonnext_design"
+            android:elevation="13dp"
+            android:layout_marginLeft="320dp"
+            android:layout_marginTop="120dp"
+            android:text="-"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage">
+        </Button>
+
+
+        <Button
+            android:id="@+id/acButton"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/upperbutton"
+            android:elevation="13dp"
+            android:onClick="allcleartask"
+            android:text="AC"
+            android:textColor="#1DE5FF"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck">
+
+        </Button>
+
+
+        <Button
+            android:id="@+id/equalButton"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/upperbutton"
+            android:elevation="13dp"
+            android:onClick="taskresult"
+            android:text="="
+            android:textColor="#69EEFF"
+            android:textSize="25dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck,TextSizeCheck">
+
+        </Button>
+
+        <Button
+            android:id="@+id/addition"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="320dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/buttonnext_design"
+            android:elevation="13dp"
+            android:onClick="taskoperator"
+            android:text="+"
+            android:textColor="#050B2B"
+            android:textSize="25dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck">
+
+        </Button>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/finalResult"
+        android:layout_width="226dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="40dp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/displayResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
